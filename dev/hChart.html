@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-ng-app="myCharts">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+    <style>
+      .hChart div {
+	      font: 10px sans-serif;
+	      background-color: steelblue;
+	      text-align: right;
+	      padding: 3px;
+	      margin: 1px;
+	      color: white;
+      }
+    </style>
+    <script>
+angular.module('myCharts', [])
+.controller('ChartsController', ['$scope', function($scope) {
+  $scope.data = [4, 26, 40,60,80,57];
+
+  $scope.addOne = function(){
+    $scope.data[0] = $scope.data[0]+1;
+  };
+
+}])
+.directive('hChart', function() {
+  return {
+    restrict: 'EA',
+    template: '<div class="hChart"><div  data-ng-repeat="d in data" h-bar-width>{{d}}</div></div>'
+  };
+})
+.directive('hBarWidth', function(){
+  return {
+    restrict: 'EA',
+    scope: true,
+    link: function(scope, elm, attrs){
+      elm.css('width',scope.d+'0px');
+    }
+  };
+});
+    </script>
+  </head>
+
+  <body  data-ng-controller="ChartsController">
+    <h1>Chart Directives</h1>
+    <div>Data: {{data}}</div>
+    <h-chart></h-chart>
+    <input ng-click="addOne()" type="button" value="Add First"/>
+  </body>
+
+</html>
