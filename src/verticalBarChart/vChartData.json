@@ -1,0 +1,15 @@
+{
+  "title": "Weekly Report",
+  "xAxisTitle": "Day of Week",
+  "yAxisTitle": "Users",
+  "yAxisUnit": "",
+  "rows": {
+    "Sun": 168,
+    "Mon": 20,
+    "Tue": 40,
+    "Wed": 60,
+    "Thu": 80,
+    "Fri": 100,
+    "Sat": 420
+  }
+}

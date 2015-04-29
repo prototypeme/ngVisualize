@@ -1,0 +1,19 @@
+{
+  "width": 700,
+  "height": 400,
+  "yPadding": 40,
+  "xPadding":20,
+  "barPadding":40,
+  "ya": {
+    "lineWidth": 1,
+    "e": []
+  },
+  "xa": {
+    "lineWidth": 1,
+    "e": []
+  },
+  "hBarWidth": 30,
+  "hb": {
+    "e": []
+  }
+}
